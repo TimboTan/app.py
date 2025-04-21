@@ -11,7 +11,7 @@ guess = st.number_input("Guess a number between 1 and 10", min_value=1, max_valu
 
 if st.button("Submit"):
   if guess == st.session_state.secret_number:
-    st.sucess("You got it! Well done.")
+    st.success("You got it! Well done.")
     st.session_state.secret_number = random.randint(1,10) # Reset secret number
     st.info("A new number has been generated.")
 elif guess < st.session_state.secret_number:
